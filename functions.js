@@ -13,8 +13,8 @@ function jb_finished()
 
 function mira_finished()
 {
-	setTimeout(function(){alert("Stabilizing your PS4.. Please Wait this might take few seconds!!\nNote: Wait till Success message appears !! "); }, 5000);
-	setTimeout(function(){alert("Load Successful!!");}, 20000);
+	setTimeout(function(){alert("Load Successful!!"); }, 8000);
+	alert("I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to Buy me a PS4 6.72 and help me get back to JB scene.\nDonate me at: https://paypal.me/darkmodder");
 }
 
 function payload_finished()
@@ -46,7 +46,16 @@ function load_mira()
 {
     document.write(MIRA('mira')+MIRA('mira2')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<div><table style="padding-left:30px;float: left;">'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
+						'</tr>'+
+						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
+						'<td>$10</td></tr>'+
+						'</table>'+
+						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -93,9 +102,18 @@ function load_mira()
 
 function load_mira_nohb()
 {
-    document.write(MIRA('mira')+MIRA('mira3')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+    document.write(MIRA('mira')+MIRA('miranohb')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<div><table style="padding-left:30px;float: left;">'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
+						'</tr>'+
+						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
+						'<td>$10</td></tr>'+
+						'</table>'+
+						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -152,7 +170,16 @@ function load_netcat()
 {
     document.write(MIRA('mira')+MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<div><table style="padding-left:30px;float: left;">'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
+						'</tr>'+
+						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
+						'<td>$10</td></tr>'+
+						'</table>'+
+						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -201,7 +228,16 @@ function load_payload(payload)
 {
     document.write(PAYLOAD('mira')+PAYLOAD(payload)+PAYLOAD('c-code')+'<script>payload_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<div><table style="padding-left:30px;float: left;">'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
+						'</tr>'+
+						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
+						'<td>$10</td></tr>'+
+						'</table>'+
+						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
