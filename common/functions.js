@@ -1,16 +1,17 @@
-var confirmJailbreak = true;
 function jb_finished()
 {
     if(main_ret == 179 || main_ret == 0){
-	alert("Jailbreak Complete!");
-    } else{
+		document.cookie = "isDone=Yes;";
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔"; }, 500);
+	}else{
         alert("Jailbreak failed! Reboot your PS4 and try again.");
-    }
+	}
 }
 
 function payload_finished()
 {
-    setTimeout(function(){alert("Load Successful!!"); }, 4000);
+	setTimeout(function(){document.getElementById("progress").innerHTML="Load Successful!!"; }, 3000);
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully ✔"; }, 5000);
 }
 
 function SC(x)
@@ -29,16 +30,16 @@ function PAYLOAD(x)
 }
 
 function load_JB()
-{	
-	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")
-	if(confirmJailbreak){
-		document.write(JB('set1')+JB('set2')+JB('set3')+JB('set4')+JB('jb')+'<script>jb_finished();</scr'+'ipt>');
+{	var isDone=getCookie("isDone");
+	if (isDone == "") {
+		if(confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")){			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
+			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');	
+		}
 	}
 }
 
 function load_netcat()
 {
-    document.write(PAYLOAD('mira')+PAYLOAD('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
 		document.write('<style>'+
 						'.button {'+
@@ -56,12 +57,9 @@ function load_netcat()
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>'+
-			       			'<div>'+
+		document.write('<h1 id="progress" style="margin-top:30px;text-align:center;">Loading! Please Wait!!</h1><hr>'+
+			       		'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
-						'<tr>'+
-						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
-						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
@@ -91,14 +89,16 @@ function load_netcat()
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
 						'</tr>'+
-						'</table>');
+						'</table></div>');
+	}else{
+		document.write('<script>document.getElementById("progress").innerHTML="Loading! Please Wait!!";</scr'+'ipt>');
 	}
+	setTimeout(function(){document.write(PAYLOAD('mira')+PAYLOAD('c-code')+'<script>document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021";</scr'+'ipt>');}, 500);
 }
 
 function load_payload(payload)
-{
-    document.write(PAYLOAD('mira')+PAYLOAD(payload)+PAYLOAD('c-code')+'<script>payload_finished();</scr'+'ipt>');
-	if(document.getElementById('table') == null){
+{	
+    if(document.getElementById('table') == null){
 		document.write('<style>'+
 						'.button {'+
 						'  background-color: #003263;'+
@@ -115,12 +115,9 @@ function load_payload(payload)
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>'+
-			       			'<div>'+
+		document.write('<h1 id="progress" style="margin-top:30px;text-align:center;">Loading! Please Wait!!</h1><hr>'+
+			       		'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
-						'<tr>'+
-						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
-						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
@@ -150,6 +147,25 @@ function load_payload(payload)
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
 						'</tr>'+
-						'</table>');
+						'</table></div>');
+	}else{
+		document.write('<script>document.getElementById("progress").innerHTML="Loading! Please Wait!!";</scr'+'ipt>');
 	}
+	setTimeout(function(){document.write(PAYLOAD('mira')+PAYLOAD(payload)+PAYLOAD('c-code')+'<script>payload_finished();</scr'+'ipt>');}, 500);
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
