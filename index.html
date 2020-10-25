@@ -62,18 +62,12 @@
                     <button class="btn btn1" onclick="load_dbBackup(); return false"> DB Backup </button>
                     <button class="btn btn1" onclick="load_dbRestore(); return false"> DB Restore </button>
                     <button class="btn btn1" onclick="load_updatesdisable(); return false"> Disable Updates </button>
-                    <button class="btn btn1" onclick="load_dumper(); return false"> Dumper </button>
-                    <button class="btn btn1" onclick="load_eapkey(); return false"> EAP Dumper </button>
-                    <button class="btn btn1" onclick="load_ftp(); return false"> FTP </button>
                     <button class="btn btn1" onclick="load_updatesenable(); return false"> Enable Updates </button>
-                    <button class="btn btn1" onclick="load_historyblock(); return false"> History Blocker </button>
-                    <button class="btn btn1" onclick="load_kerneldump(); return false"> Kernel Dumper </button>
-                    <button class="btn btn1" onclick="load_linux(); return false"> Linux </button>
+                    <button class="btn btn1" onclick="load_dumper(); return false"> Dumper </button>
+                    <button class="btn btn1" onclick="load_ftp(); return false"> FTP </button>
                     <button class="btn btn1" onclick="load_webrte(); return false"> WebRTE </button>
                     <button class="btn btn1" onclick="load_binloader(); return false"> Bin Loader </button>
                     <br><br>
-                    <button class="btn btn1" onclick="load_tokratos(); return false"> ToKratos </button>
-                    <button class="btn btn1" onclick="load_todev(); return false"> ToDEV </button>
                     <button class="btn btn1" onclick="load_todex(); return false"> ToDEX </button>
                     <button class="btn btn1" onclick="load_ps4debug(); return false"> PS4 Debug </button>
                     <br><br>
@@ -103,25 +97,9 @@
                 setTimeout(jailbreak, 500);
             }
 
-            function load_exploit_mira() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading JB + Mira...</h1>";
-                LoadedMSG = "JB + Mira Loaded ✔";
-                ExploitMira = "yes";
-                MiraSRC = "pl_mira.js";
-                setTimeout(jailbreak, 500);
-            }
-
-            function load_exploit_miraUnoff() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading JB + Mira (Unofficial)...</h1>";
-                LoadedMSG = "JB + Mira Loaded ✔";
-                ExploitMira = "yes";
-                MiraSRC = "pl_mira_unofficial.js";
-                setTimeout(jailbreak, 500);
-            }
-
             function load_exploit_HEN() {
                 msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading Jailbreak + HEN...</h1>";
-                LoadedMSG = "JB + HEN Loaded ✔";
+                LoadedMSG = "Jailbroken + HEN Loaded ✔";
                 ExploitMira = "HEN";
                 MiraSRC = "pl_HEN.js";
                 setTimeout(jailbreak, 500);
@@ -140,28 +118,6 @@
                 LoadedMSG = "HEN Loaded ✔";
                 var script = document.createElement('script');
                 script.src = "pl_HEN.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_mira() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading Mira...</h1>";
-                LoadedMSG = "Mira Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_mira.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_mira_unofficial() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading Mira...</h1>";
-                LoadedMSG = "Mira Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_mira_unofficial.js";
                 document.getElementsByTagName('head')[0].appendChild(script);
                 var script = document.createElement('script');
                 script.src = "exp_loader.js";
@@ -190,33 +146,11 @@
                 document.getElementsByTagName('head')[0].appendChild(script);
             }
 
-            function load_linux() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading Linux...</h1>";
-                LoadedMSG = "Linux Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_linux.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
             function load_app2usb() {
                 msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading AppToUSB...</h1>";
                 LoadedMSG = "AppToUSB Loaded ✔";
                 var script = document.createElement('script');
                 script.src = "pl_app2usb.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_kerneldump() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading Kernel Dumper...</h1>";
-                LoadedMSG = "Kernel Dumper Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_kernelDumper.js";
                 document.getElementsByTagName('head')[0].appendChild(script);
                 var script = document.createElement('script');
                 script.src = "exp_loader.js";
@@ -245,44 +179,11 @@
                 document.getElementsByTagName('head')[0].appendChild(script);
             }
 
-            function load_todev() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading ToDEV...</h1>";
-                LoadedMSG = "ToDEV Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_ToDEV.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_tokratos() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading ToKratos...</h1>";
-                LoadedMSG = "ToKratos Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_ToKratos.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
             function load_todex() {
                 msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading ToDEX...</h1>";
                 LoadedMSG = "ToDEX Loaded ✔";
                 var script = document.createElement('script');
                 script.src = "pl_ToDEX.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_historyblock() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading History Blocker...</h1>";
-                LoadedMSG = "History Blocker Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_historyBlocker.js";
                 document.getElementsByTagName('head')[0].appendChild(script);
                 var script = document.createElement('script');
                 script.src = "exp_loader.js";
@@ -327,17 +228,6 @@
                 LoadedMSG = "DB Restore Loaded ✔";
                 var script = document.createElement('script');
                 script.src = "pl_dbRestore.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-                var script = document.createElement('script');
-                script.src = "exp_loader.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
-
-            function load_eapkey() {
-                msgs.innerHTML = "<h1 style='font-size:25px;text-align:center;'>Loading EAP Dumper...</h1>";
-                LoadedMSG = "EAP Dumper Loaded ✔";
-                var script = document.createElement('script');
-                script.src = "pl_eapkey.js";
                 document.getElementsByTagName('head')[0].appendChild(script);
                 var script = document.createElement('script');
                 script.src = "exp_loader.js";
